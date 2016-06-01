@@ -24,17 +24,25 @@ Hero.prototype = {
     }
   },
  attack: function(enemy) {
-   if ( enemy.health < this.strength) {
-     enemy.health = 0;
-     enemy.poisonValue = 0;
-   }
-   else {
-     enemy.health -= this.strength;
-   }
- }
-};
+    if ( enemy.health < this.strength) {
+      enemy.health = 0;
+      enemy.poisonValue = 0;
+    }
+    else {
+      enemy.health -= this.strength;
+    }
+  },
 
 // TODO: The Hero has a function that allows him to search enemies that have the "dead" state. Searching will take food from the rats loot table and add it to the hero inventory.
+
+  lootBody: function(enemy) {
+    if ( enemy.health === 0 ) {
+      this.inventory = [enemy.lootTable.pop()];
+    }
+  }
+};
+
+
 
 // TODO: complexity stretch goal for inventory - heros will have an invetory limit, if their inventory is full they gain the "Overencumbered" state and are no longer as agile.
 
