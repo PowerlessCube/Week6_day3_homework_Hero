@@ -11,12 +11,15 @@ Rat.prototype = {
     food.healthValue = this.poisonValue;
   },
 
-// IDEA: Stretch goal - rat loot tables Populates with Food items on rats death.
   populateLootTable: function(item) {
     if (this.health === 0) {
-      this.lootTable.push(item);
+      
     }
   }
+
+
 };
 
 module.exports = Rat;
+
+// TODO: Stretch Goal - rats/enemies have loot tables. an array of items that the hero can "search" for if enemy is dead. The array, can only be searched if the rat is in the "dead" state

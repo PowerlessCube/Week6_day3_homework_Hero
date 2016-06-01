@@ -5,12 +5,12 @@ var assert = require( 'chai' ).assert;
 
 describe('Hero', function() {
 
-beforeEach( function() {
-  bat = new Hero("Batman", 100, "apple", 80 );
-  apple = new Food( "apple", 10 );
-  banana = new Food( "banana", 10 );
-  rat = new Rat("Rat",20,5);
-});
+  beforeEach( function() {
+    bat = new Hero("Batman", 100, "apple", 80 );
+    apple = new Food( "apple", 10 );
+    banana = new Food( "banana", 10 );
+    rat = new Rat("Rat",20,5);
+  });
 
   it('Should have a name', function() {
     assert.equal("Batman", bat.name );
